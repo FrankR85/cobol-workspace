@@ -1,7 +1,7 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID.  TICTACTO.
+       PROGRAM-ID.  TTTM.
       *****************************************************************
-      * TRIVIAL PROGRAM TO EXERCISE ZUTZCPC.
+      * Implementation des TIC TACT TOE Spiels.
       *****************************************************************       
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
@@ -44,9 +44,9 @@
                ' Bitte 2 mit einem Zeichen getrennte Zahlen eingeben'
              PERFORM WITH TEST AFTER UNTIL STATUS-LAUFEND
                ACCEPT EINGABE
-               PERFORM PRUEFE-EINGABE
+               PERFORM PRUEFE-LESE-EINGABE
              END-PERFORM
-             PERFORM PRUEFE-SIEG
+             PERFORM PRUEFE-SPIELSTATUS
            END-PERFORM
 
            STOP RUN.
@@ -71,8 +71,9 @@
            END-PERFORM
            EXIT.
       *-----------------------------------------------------------------
-      * Prueft ob die Eingabe gültig ist.   
-       PRUEFE-EINGABE SECTION.
+      * Prueft ob die Eingabe gültig ist 
+      * und liest sie in diesem Fall ein.   
+       PRUEFE-LESE-EINGABE SECTION.
            EVALUATE TRUE
              WHEN EINGABE-X IS NOT NUMERIC
              WHEN EINGABE-Y IS NOT NUMERIC
@@ -90,8 +91,9 @@
            EXIT.
       
       *-----------------------------------------------------------------
-      * Prüft, ob der aktive Spieler gewonnen hat
-       PRUEFE-SIEG SECTION.
+      * Prüft den Spielstatus nach dem letzten Zug
+      * (gewonnen, unentschieden, laufend)
+       PRUEFE-SPIELSTATUS SECTION.
       
       * 1. Prüfung waagerecht
       * 2. Prüfung senkrecht
