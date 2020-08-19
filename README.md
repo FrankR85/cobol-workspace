@@ -9,7 +9,6 @@ Für diesen Kurs gibt es ein Dockerimage, welches fertig eingerichtet ist. Wir e
 2. Dieses Repository clonen
 
 3. Ein Terminal öffnen, in den cobol-workspace Ordner navigieren und die folgenden Befehle ausführen:
-    Empfehlung: Den Ordner in einer IDE wie Visual Studio Code öffnen und die integrierte Shell verwenden.
 
 ```bash
 docker rmi frankr85/cobol:latest -f
@@ -17,6 +16,8 @@ docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:
 ```
 
 4. Testen, ob alles funktioniert hat. **TODO Hello World ist leer**
+
+5. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit der Extension bitlang.cobol
 
 **DIY Install**
 
