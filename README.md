@@ -2,19 +2,22 @@
 
 ## Installation
 **Easy Install**
+
 Für diesen Kurs gibt es ein Dockerimage, welches fertig eingerichtet ist
-1. Docker installieren
-[Windows install] (https://docs.docker.com/docker-for-windows/install/)
+1. Docker installieren [Windows install](https://docs.docker.com/docker-for-windows/install)
+
 2. Dieses Repository clonen
-3. Ein Terminal öffnen, in den cobol-workspace Ordner navigieren und die folgenden Befehle ausführen
+3. Ein Terminal öffnen, in den cobol-workspace Ordner navigieren und die folgenden Befehle ausführen:
 ```bash
 docker rmi frankr85/cobol:latest -f
 docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
 ```
-Empfehlung: Den Ordner in einer IDE wie Visual Studio Code öffnen und die integrierte Shell dafür nehmen
-4. Test, ob alles funktioniert hat **TODO Hello World ist leer**
+Empfehlung: Den Ordner in einer IDE wie Visual Studio Code öffnen und die integrierte Shell verwenden.
+
+4. Testen, ob alles funktioniert hat. **TODO Hello World ist leer**
 
 **DIY Install**
+
 Ihr könnt den GnuCOBOL-Compiler und evtl. die verwendeten Projekte auch selber installieren. Allerdings müsst ihr das ganze dann selber zum Laufen bringen. 
 
 Für die Unittests verwenden wir das Projekt [cobol-unit-test von neopragma](https://github.com/neopragma/cobol-unit-test) 
