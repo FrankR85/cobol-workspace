@@ -29,3 +29,17 @@ Für die Unittests verwenden wir das Projekt [cobol-unit-test von neopragma](htt
 Für diesen Kurs wurde eine Kurzeinweisung in COBOL geschrieben. Ihr findet sie [hier](https://frankr85.github.io/cobol-handbuch/)
 
 Die komplette Dokumentation für den GnuCOBOL-Compiler findet ihr [hier](https://gnucobol.sourceforge.io/guides/GnuCOBOL%202.2%20NOV2017%20Programmers%20Guide%20(A4).pdf) **TODO Das ist nur Version 2.2 Wo sind die neueren?**
+
+## Start des eigenen Projekts
+Damit ihr euch auf das Entwickeln und nicht das Einrichten des Entwicklungs- und Testtools konzentrieren könnt, haben wir euch eine Kopierbasis bereitgestellt, an der ihr nur wenige Anpassungen durchführen müsst
+1. Kopiert euch den Ordner base
+2. Ersetzt alle Vorkommnisse von base durch euren Projektnamen, bspw. mypgm
+2.1 ./base in ./mypgm
+2.2 ./base/src/BASE**M**.CBL in ./mypgm/src/MYPGMM.CBL (Euer Hauptprogramm)
+2.3 ./base/test/BASE**T**.CBL in ./mypgm/test/MYPGMT.CBL (Eure Tests)
+2.4 ./base/test/resources/BASE**C** in ./mypgm/test/resources/MYPGMC
+2.5 Ändert in der Datei /base/run-ut.sh das Wort base in mypgm bzw. MYPGM
+3. Bereit für dein Projekt
+
+ 
+
