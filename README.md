@@ -1,3 +1,4 @@
+[![Gitter](https://badges.gitter.im/wwucobol/Aufgaben.svg)](https://gitter.im/wwucobol/Aufgaben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 # COBOL Workspace
 
 ## Installation
