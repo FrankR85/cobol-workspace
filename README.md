@@ -1,3 +1,4 @@
+[![Gitter](https://badges.gitter.im/wwucobol/Aufgaben.svg)](https://gitter.im/wwucobol/Aufgaben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 # COBOL Workspace
 
 ## Installation
@@ -39,6 +40,26 @@ Für die Unittests verwenden wir das Projekt [cobol-unit-test von neopragma](htt
 Für diesen Kurs wurde eine Kurzeinweisung in COBOL geschrieben. Ihr findet sie [hier](https://frankr85.github.io/cobol-handbuch/).
 
 Die komplette Dokumentation für den GnuCOBOL-Compiler der Version 3.1 findet ihr [hier](https://sourceforge.net/p/gnucobol/code/HEAD/tree/external-doc/guide/PDFs/gnucobpg-a4.pdf?format=raw).
+
+## Hallo Welt
+Gewöhnlich beginnt man das Erlernen einer neuen Programmiersprache mit einem `Hallo Welt`-Beispiel.
+Dieses Beispiel findet ihr im Ordner `helloworld`. Nachdem ihr den Container gestartet habt und euch mit einer Shell verbunden habt, könnt ihr in das Verzeichnis wechseln:
+```
+cd helloworld
+```
+Und die Datei `HELLOWORLD.CBL` anschließend kompilieren:
+```
+cobc -x HELLOWORLD.CBL
+```
+Der Compiler erzeugt ein Binary `HELLOWORLD`, welches ihr ausführen könnt:
+```
+./HELLOWORLD
+```
+Die Ausgabe sollte
+```
+Hallo Wwu!
+``` 
+sein.
 
 ## Start des eigenen Projekts
 Damit ihr euch auf das Entwickeln und nicht das Einrichten des Entwicklungs- und Testtools konzentrieren könnt, haben wir euch eine Kopierbasis bereitgestellt, an der ihr nur wenige Anpassungen durchführen müsst:
