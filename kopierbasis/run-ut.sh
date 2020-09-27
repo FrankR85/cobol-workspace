@@ -1,1 +1,1 @@
-/home/cobol/cobol-unit-test/run-ut -p base BASEC BASEM BASET
+/home/cobol/cobol-unit-test/run-ut -p kopierbasis KOPIERBASIS_C KOPIERBASIS_M KOPIERBASIS_T
