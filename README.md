@@ -16,19 +16,30 @@ docker rmi frankr85/cobol:latest -f
 docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
 ```
 
-4. Testen, ob alles funktioniert hat. Gebt dazu folgendes in das Terminal ein:
+4. Testen, ob der GnuCOBOL bei euch läuft. Gebt dazu folgendes in das Terminal ein:
+
 ```bash
-./ttt/run-ut.sh 
+cobc -x -j helloworld/HELLWORLD.CBL 
+```
+Die Ausgabe sollte so aussehen:
+```bash
+Hallo WWU!
+```
+
+5. Testen, ob der das Testframework bei euch läuft: 
+
+```bash
+./testframework/run-ut.sh 
 ```
 Die letzten Zeilen der Ausgabe sollte in etwa so aussehen:
 ```bash
-  9 TEST CASES WERE EXECUTED
-  9 PASSED
+  1 TEST CASES WERE EXECUTED
+  1 PASSED
   0 FAILED
 =================================================
 ```
 
-5. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit der Extension bitlang.cobol.
+6. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit der Extension bitlang.cobol.
 
 **DIY Install**
 
@@ -61,12 +72,12 @@ Hallo Wwu!
 ``` 
 sein.
 
-## Start des eigenen Projekts
+## Eigenes Projekt mit dem Testframework
 Damit ihr euch auf das Entwickeln und nicht das Einrichten des Entwicklungs- und Testtools konzentrieren könnt, haben wir euch eine Kopierbasis bereitgestellt, an der ihr nur wenige Anpassungen durchführen müsst:
-1. Kopiert den Ordner base
-2. Ersetzt alle Vorkommnisse von base durch euren Projektnamen, bspw. mypgm:
-    1. ./base in ./mypgm.
-    2. ./base/src/BASE**M**.CBL in ./mypgm/src/MYPGMM.CBL (Euer Hauptprogramm)
-    3. ./base/test/BASE**T**.CBL in ./mypgm/test/MYPGMT.CBL (Eure Tests)
-    4. ./base/test/resources/BASE**C** in ./mypgm/test/resources/MYPGMC
-    5. Ändert in der Datei /base/run-ut.sh das Wort base in mypgm bzw. BASE in MYPGM.
+1. Kopiert den Ordner kopierbasis
+2. Ersetzt alle Vorkommnisse von kopierbasis durch euren Projektnamen, bspw. mypgm:
+    1. ./kopierbasis in ./mypgm.
+    2. ./kopierbasis/src/KOPIERBASIS_**M**.CBL in ./mypgm/src/MYPGM_M.CBL (Euer Hauptprogramm)
+    3. ./kopierbasis/test/KOPIERBASIS_**T**.CBL in ./mypgm/test/MYPGM_T.CBL (Eure Tests)
+    4. ./kopierbasis/test/resources/KOPIERBASIS_**C** in ./mypgm/test/resources/MYPGM_C (Copies)
+    5. Ändert in der Datei /kopierbasis/run-ut.sh kopierbasis in mypgm und KOPIERBASIS in MYPGM.
