@@ -72,12 +72,12 @@ Hallo Wwu!
 ``` 
 sein.
 
-## Start des eigenen Projekts
+## Eigenes Projekt mit dem Testframework
 Damit ihr euch auf das Entwickeln und nicht das Einrichten des Entwicklungs- und Testtools konzentrieren könnt, haben wir euch eine Kopierbasis bereitgestellt, an der ihr nur wenige Anpassungen durchführen müsst:
-1. Kopiert den Ordner base
-2. Ersetzt alle Vorkommnisse von base durch euren Projektnamen, bspw. mypgm:
-    1. ./base in ./mypgm.
-    2. ./base/src/BASE**M**.CBL in ./mypgm/src/MYPGMM.CBL (Euer Hauptprogramm)
-    3. ./base/test/BASE**T**.CBL in ./mypgm/test/MYPGMT.CBL (Eure Tests)
-    4. ./base/test/resources/BASE**C** in ./mypgm/test/resources/MYPGMC
-    5. Ändert in der Datei /base/run-ut.sh das Wort base in mypgm bzw. BASE in MYPGM.
+1. Kopiert den Ordner kopierbasis
+2. Ersetzt alle Vorkommnisse von kopierbasis durch euren Projektnamen, bspw. mypgm:
+    1. ./kopierbasis in ./mypgm.
+    2. ./kopierbasis/src/KOPIERBASIS_**M**.CBL in ./mypgm/src/MYPGM_M.CBL (Euer Hauptprogramm)
+    3. ./kopierbasis/test/KOPIERBASIS_**T**.CBL in ./mypgm/test/MYPGM_T.CBL (Eure Tests)
+    4. ./kopierbasis/test/resources/KOPIERBASIS_**C** in ./mypgm/test/resources/MYPGM_C (Copies)
+    5. Ändert in der Datei /kopierbasis/run-ut.sh kopierbasis in mypgm und KOPIERBASIS in MYPGM.
