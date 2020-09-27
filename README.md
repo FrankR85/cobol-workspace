@@ -16,19 +16,30 @@ docker rmi frankr85/cobol:latest -f
 docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
 ```
 
-4. Testen, ob alles funktioniert hat. Gebt dazu folgendes in das Terminal ein:
+4. Testen, ob der GnuCOBOL bei euch läuft. Gebt dazu folgendes in das Terminal ein:
+
 ```bash
-./ttt/run-ut.sh 
+cobc -x -j helloworld/HELLWORLD.CBL 
+```
+Die Ausgabe sollte so aussehen:
+```bash
+Hallo WWU!
+```
+
+5. Testen, ob der das Testframework bei euch läuft: 
+
+```bash
+./testframework/run-ut.sh 
 ```
 Die letzten Zeilen der Ausgabe sollte in etwa so aussehen:
 ```bash
-  9 TEST CASES WERE EXECUTED
-  9 PASSED
+  1 TEST CASES WERE EXECUTED
+  1 PASSED
   0 FAILED
 =================================================
 ```
 
-5. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit der Extension bitlang.cobol.
+6. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit der Extension bitlang.cobol.
 
 **DIY Install**
 
