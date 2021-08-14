@@ -7,5 +7,5 @@
 !*.CBL
 !*.sh
 !*.SH
-!.yml
+!*.yml
 !*/test/resources/*C
