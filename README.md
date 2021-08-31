@@ -26,7 +26,7 @@ Die Ausgabe sollte so aussehen:
 Hallo WWU!
 ```
 
-5. Testen, ob der das Testframework bei euch läuft: 
+5. Testen, ob das Testframework bei euch läuft: 
 
 ```bash
 ./testframework/run-ut.sh 
