@@ -1,4 +1,5 @@
-[![Gitter](https://badges.gitter.im/wwucobol/Aufgaben.svg)](https://gitter.im/wwucobol/Aufgaben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/FrankR85/cobol-workspace)
+
 # COBOL Workspace
 
 ## Installation
