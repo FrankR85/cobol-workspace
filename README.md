@@ -78,7 +78,4 @@ Damit ihr euch auf das Entwickeln und nicht das Einrichten des Entwicklungs- und
 1. Kopiert den Ordner kopierbasis
 2. Ersetzt alle Vorkommnisse von kopierbasis durch euren Projektnamen, bspw. mypgm:
     1. ./kopierbasis in ./mypgm.
-    2. ./kopierbasis/src/KOPIERBASIS_**M**.CBL in ./mypgm/src/MYPGM_M.CBL (Euer Hauptprogramm)
-    3. ./kopierbasis/test/KOPIERBASIS_**T**.CBL in ./mypgm/test/MYPGM_T.CBL (Eure Tests)
-    4. ./kopierbasis/test/resources/KOPIERBASIS_**C** in ./mypgm/test/resources/MYPGM_C (Copies)
-    5. Ändert in der Datei /kopierbasis/run-ut.sh kopierbasis in mypgm und KOPIERBASIS in MYPGM.
+    2. Ändert in der Datei /kopierbasis/run-ut.sh kopierbasis in mypgm.

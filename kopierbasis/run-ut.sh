@@ -1,1 +1,1 @@
-/home/cobol/cobol-unit-test/run-ut -p kopierbasis KOPIERBASIS_C KOPIERBASIS_M KOPIERBASIS_T
+/home/cobol/cobol-unit-test/run-ut -p kopierbasis TESTCOPY MAIN TEST
