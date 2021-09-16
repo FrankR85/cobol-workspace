@@ -1,1 +1,4 @@
 image: frankr85/cobol:latest
+vscode:
+  extensions: 
+    - ibm.zopeneditor
