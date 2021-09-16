@@ -27,7 +27,7 @@ cobc -x -j helloworld/HELLWORLD.CBL
 ```
 Die Ausgabe sollte so aussehen:
 ```
-Hallo WWU!
+Hallo Welt!
 ```
 
 5. Testen, ob das Testframework bei euch läuft: 
