@@ -2,6 +2,10 @@
 
 # COBOL Workspace
 
+## Ausprobieren im Webeditor
+
+Ihr seid neu und wollt COBOL und diesen Workspace einfach mal ausprobieren? Dann klickt [hier](https://gitpod.io/#https://github.com/FrankR85/cobol-workspace).
+
 ## Installation
 **Easy Install**
 
@@ -13,8 +17,7 @@ Für diesen Kurs gibt es ein Dockerimage, welches fertig eingerichtet ist. Wir e
 3. Ein Terminal öffnen, in den cobol-workspace Ordner navigieren und die folgenden Befehle ausführen:
 
 ```bash
-docker rmi frankr85/cobol:latest -f
-docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
+docker rmi frankr85/cobol:latest -f && docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
 ```
 
 4. Testen, ob der GnuCOBOL bei euch läuft. Gebt dazu folgendes in das Terminal ein:
@@ -23,7 +26,7 @@ docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:
 cobc -x -j helloworld/HELLWORLD.CBL 
 ```
 Die Ausgabe sollte so aussehen:
-```bash
+```
 Hallo WWU!
 ```
 
@@ -40,7 +43,7 @@ Die letzten Zeilen der Ausgabe sollte in etwa so aussehen:
 =================================================
 ```
 
-6. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit der Extension bitlang.cobol.
+6. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit einer COBOL-Extension wie bitlang.cobol.
 
 **DIY Install**
 
