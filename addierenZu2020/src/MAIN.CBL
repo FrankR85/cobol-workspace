@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID.  TTTM.
+       PROGRAM-ID.  BASEM.
       *****************************************************************
       * Implementation des TIC TACT TOE Spiels.
       *****************************************************************       
@@ -9,5 +9,5 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        PROCEDURE DIVISION.
+           DISPLAY 'HELLO WORLD'
            STOP RUN.
-           
