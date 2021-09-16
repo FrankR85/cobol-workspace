@@ -8,4 +8,5 @@
 !*.sh
 !*.SH
 !*.yml
-!*/test/resources/*C
+!*/test/resources/*
+TESTPRG.CBL

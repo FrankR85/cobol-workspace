@@ -1,3 +1,0 @@
-           TESTSUITE 'TIC TACT TOE TEST'
-
-           TESTCASE 'TESTCASE'

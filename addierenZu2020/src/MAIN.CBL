@@ -1,7 +1,7 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID.  TTTM.
+       PROGRAM-ID.  MAIN.
       *****************************************************************
-      * Implementation des TIC TACT TOE Spiels.
+      * Hülle für das Programm
       *****************************************************************       
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
@@ -9,5 +9,5 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        PROCEDURE DIVISION.
+           DISPLAY 'HELLO WORLD'
            STOP RUN.
-           
