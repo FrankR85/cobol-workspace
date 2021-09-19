@@ -17,9 +17,18 @@ Für diesen Kurs gibt es ein Dockerimage, welches fertig eingerichtet ist. Wir e
 3. Ein Terminal öffnen, in den cobol-workspace Ordner navigieren und die folgenden Befehle ausführen:
 
 ```bash
-docker rmi frankr85/cobol:latest -f && docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
+docker rmi frankr85/cobol:latest -f
 ```
 
+**Linux & Windows Powersholl**
+```bash
+docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
+```
+
+**Windows cmd**
+```bash
+docker run -it --mount src="%cd%",target=/root/cobol,type=bind frankr85/cobol:latest bash
+```
 4. Testen, ob der GnuCOBOL bei euch läuft. Gebt dazu folgendes in das Terminal ein:
 
 ```bash
@@ -30,7 +39,7 @@ Die Ausgabe sollte so aussehen:
 Hallo Welt!
 ```
 
-5. Testen, ob das Testframework bei euch läuft: 
+5. Testen, ob das Testframework bei euch läuft (optional): 
 
 ```bash
 ./testframework/run-ut.sh 
