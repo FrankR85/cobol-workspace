@@ -9,4 +9,5 @@
 !*.SH
 !*.yml
 !*/test/resources/*
+!.gitattributes
 TESTPRG.CBL
