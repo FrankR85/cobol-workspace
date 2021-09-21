@@ -1,13 +1,80 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID.  MAIN.
-      *****************************************************************
-      * Hülle für das Programm
-      *****************************************************************       
-       ENVIRONMENT DIVISION.
-       INPUT-OUTPUT SECTION.
-       FILE-CONTROL.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
+       01 TEMP-FELDER.
+         05 CURRENT-NUMBER PIC 9(09).
+         05 CURRENT-MOVE-NUMBER PIC 9(09).
+         05 NEXT-NUMBER PIC 9(09).
+         05 NEXT-NUMBER-DISPLAY PIC ZZZZZZZ9.
+         05 NUMBER-OF-ROUNDS PIC 9(09).
+         05 ZAEHLER PIC 99.
+         05 CURRENT-INDEX PIC 99.
+         05 EINGABE-FOLGE.
+            06 STARTING-NUMBERS OCCURS 10.
+                07 STARTING-NUMBER PIC 99.
+                07 FILLER PIC X.
+       01 MEMORY-TABLE.
+          05 SAVED-MOVES OCCURS 10000000.
+            07 LAST-MOVE-NUMBER PIC 9(08).
+            07 SECOND-LAST-MOVE-NUMBER PIC 9(08).
        PROCEDURE DIVISION.
-           DISPLAY 'HELLO WORLD'
+           DISPLAY "Wieviele Runden möchtest du spielen?"
+           ACCEPT NUMBER-OF-ROUNDS
+
+           PERFORM EINLESEN-STARTFOLGE
+           SUBTRACT CURRENT-MOVE-NUMBER
+               FROM NUMBER-OF-ROUNDS
+             GIVING NUMBER-OF-ROUNDS
+
+           PERFORM NUMBER-OF-ROUNDS TIMES
+            ADD 1 TO CURRENT-MOVE-NUMBER
+            PERFORM COMPUTE-NEXT-NUMBER
+            
+            PERFORM UPDATE-MEMORY
+
+           END-PERFORM
+           PERFORM DISPLAY-MOVE
+
            STOP RUN.
+
+       COMPUTE-NEXT-NUMBER SECTION.
+           IF LAST-MOVE-NUMBER (CURRENT-NUMBER + 1) 
+              <> CURRENT-MOVE-NUMBER - 1
+              OR SECOND-LAST-MOVE-NUMBER (CURRENT-NUMBER + 1) <> 0
+           THEN
+            SUBTRACT SECOND-LAST-MOVE-NUMBER (CURRENT-NUMBER + 1) 
+                FROM LAST-MOVE-NUMBER (CURRENT-NUMBER + 1)
+                GIVING NEXT-NUMBER
+           ELSE
+             MOVE ZERO
+               TO NEXT-NUMBER
+           END-IF
+       EXIT.     
+
+       UPDATE-MEMORY SECTION.
+           MOVE LAST-MOVE-NUMBER (NEXT-NUMBER + 1)
+             TO SECOND-LAST-MOVE-NUMBER (NEXT-NUMBER + 1)
+           MOVE CURRENT-MOVE-NUMBER
+             TO LAST-MOVE-NUMBER (NEXT-NUMBER + 1)
+           MOVE NEXT-NUMBER
+             TO CURRENT-NUMBER
+       EXIT.
+
+       DISPLAY-MOVE SECTION.
+           MOVE NEXT-NUMBER TO NEXT-NUMBER-DISPLAY
+           DISPLAY "Das Ergebnis ist: " NEXT-NUMBER-DISPLAY
+       EXIT.
+
+       EINLESEN-STARTFOLGE SECTION.
+           DISPLAY "Bitte Startfolge eingeben (zB 01,02,03):"
+           ACCEPT EINGABE-FOLGE
+
+           PERFORM VARYING ZAEHLER FROM 1 BY 1 
+             UNTIL STARTING-NUMBER (ZAEHLER) = SPACE
+             COMPUTE CURRENT-INDEX = STARTING-NUMBER (ZAEHLER) + 1
+             MOVE ZAEHLER TO LAST-MOVE-NUMBER (CURRENT-INDEX)
+           END-PERFORM
+           SUBTRACT 1 FROM ZAEHLER GIVING CURRENT-MOVE-NUMBER
+           MOVE STARTING-NUMBER (ZAEHLER - 1) TO CURRENT-NUMBER
+       EXIT.
