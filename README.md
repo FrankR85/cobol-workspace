@@ -1,5 +1,10 @@
-[![Gitter](https://badges.gitter.im/wwucobol/Aufgaben.svg)](https://gitter.im/wwucobol/Aufgaben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/FrankR85/cobol-workspace)
+
 # COBOL Workspace
+
+## Ausprobieren im Webeditor
+
+Ihr seid neu und wollt COBOL und diesen Workspace einfach mal ausprobieren? Dann klickt [hier](https://gitpod.io/#https://github.com/FrankR85/cobol-workspace).
 
 ## Installation
 **Easy Install**
@@ -13,20 +18,28 @@ Für diesen Kurs gibt es ein Dockerimage, welches fertig eingerichtet ist. Wir e
 
 ```bash
 docker rmi frankr85/cobol:latest -f
+```
+
+**Linux & Windows Powershell**
+```bash
 docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
 ```
 
+**Windows cmd**
+```bash
+docker run -it --mount src="%cd%",target=/root/cobol,type=bind frankr85/cobol:latest bash
+```
 4. Testen, ob der GnuCOBOL bei euch läuft. Gebt dazu folgendes in das Terminal ein:
 
 ```bash
 cobc -x -j helloworld/HELLWORLD.CBL 
 ```
 Die Ausgabe sollte so aussehen:
-```bash
-Hallo WWU!
+```
+Hallo Welt!
 ```
 
-5. Testen, ob der das Testframework bei euch läuft: 
+5. Testen, ob das Testframework bei euch läuft (optional): 
 
 ```bash
 ./testframework/run-ut.sh 
@@ -39,7 +52,7 @@ Die letzten Zeilen der Ausgabe sollte in etwa so aussehen:
 =================================================
 ```
 
-6. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit der Extension bitlang.cobol.
+6. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit einer COBOL-Extension wie bitlang.cobol.
 
 **DIY Install**
 
@@ -77,7 +90,4 @@ Damit ihr euch auf das Entwickeln und nicht das Einrichten des Entwicklungs- und
 1. Kopiert den Ordner kopierbasis
 2. Ersetzt alle Vorkommnisse von kopierbasis durch euren Projektnamen, bspw. mypgm:
     1. ./kopierbasis in ./mypgm.
-    2. ./kopierbasis/src/KOPIERBASIS_**M**.CBL in ./mypgm/src/MYPGM_M.CBL (Euer Hauptprogramm)
-    3. ./kopierbasis/test/KOPIERBASIS_**T**.CBL in ./mypgm/test/MYPGM_T.CBL (Eure Tests)
-    4. ./kopierbasis/test/resources/KOPIERBASIS_**C** in ./mypgm/test/resources/MYPGM_C (Copies)
-    5. Ändert in der Datei /kopierbasis/run-ut.sh kopierbasis in mypgm und KOPIERBASIS in MYPGM.
+    2. Ändert in der Datei /kopierbasis/run-ut.sh kopierbasis in mypgm.

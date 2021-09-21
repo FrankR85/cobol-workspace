@@ -1,7 +1,7 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID.  BASEM.
+       PROGRAM-ID.  MAIN.
       *****************************************************************
-      * Implementation des TIC TACT TOE Spiels.
+      * Hülle für das Programm
       *****************************************************************       
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
