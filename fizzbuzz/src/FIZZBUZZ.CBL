@@ -13,7 +13,5 @@
 
            GOBACK.
        1000-PROCESS-NUMBER SECTION. 
-           MOVE "FIZZ"
-             TO CURRENT-RESULT
            EXIT.
        END PROGRAM FIZZBUZZ.
