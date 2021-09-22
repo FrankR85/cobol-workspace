@@ -14,8 +14,9 @@
             06 STARTING-NUMBERS OCCURS 10.
                 07 STARTING-NUMBER PIC 99.
                 07 FILLER PIC X.
+         05 MAX-NUMBER PIC 9(08).
        01 MEMORY-TABLE.
-          05 SAVED-MOVES OCCURS 10000000.
+          05 SAVED-MOVES OCCURS 15000000.
             07 LAST-MOVE-NUMBER PIC 9(08).
             07 SECOND-LAST-MOVE-NUMBER PIC 9(08).
        PROCEDURE DIVISION.
@@ -49,6 +50,12 @@
            ELSE
              MOVE ZERO
                TO NEXT-NUMBER
+           END-IF
+
+           IF NEXT-NUMBER > MAX-NUMBER THEN
+              MOVE NEXT-NUMBER TO MAX-NUMBER
+      D        DISPLAY "Neues Maximum: " MAX-NUMBER 
+      D                " in Runde " CURRENT-MOVE-NUMBER
            END-IF
        EXIT.     
 
