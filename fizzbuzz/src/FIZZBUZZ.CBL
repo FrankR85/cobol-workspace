@@ -13,13 +13,16 @@
 
            GOBACK.
        1000-PROCESS-NUMBER SECTION. 
-           IF FUNCTION MOD (CURRENT-NUMBER, 3) = 0
-           THEN
+           EVALUATE TRUE
+           WHEN FUNCTION MOD (CURRENT-NUMBER, 3) = 0
              MOVE "FIZZ" TO CURRENT-RESULT
-           ELSE
+           WHEN FUNCTION MOD (CURRENT-NUMBER, 5) = 0
+             MOVE "BUZZ" TO CURRENT-RESULT
+           WHEN OTHER
              MOVE CURRENT-NUMBER TO CURRENT-RESULT
              INSPECT CURRENT-RESULT REPLACING 
-               LEADING "0" BY " "
-           END-IF
+             LEADING "0" BY " "
+           END-EVALUATE
+
            EXIT.
        END PROGRAM FIZZBUZZ.
