@@ -7,7 +7,7 @@
           05 ZAEHLER2 PIC 9.
           05 KRYPTO-HASH-VALUES.
              07 HASH1 VALUE "ABCDEF".
-             07 HASH2 VALUE "EFGHHI".
+             07 HASH2 VALUE "EFGHIJ".
 
        PROCEDURE DIVISION.
       *    Programmlogik kommt hier.
