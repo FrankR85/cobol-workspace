@@ -20,7 +20,7 @@ Für diesen Kurs gibt es ein Dockerimage, welches fertig eingerichtet ist. Wir e
 docker rmi frankr85/cobol:latest -f
 ```
 
-**Linux & Windows Powersholl**
+**Linux & Windows Powershell**
 ```bash
 docker run -it --mount src="$(pwd)",target=/root/cobol,type=bind frankr85/cobol:latest bash
 ```
