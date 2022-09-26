@@ -1,4 +1,4 @@
-image: frankr85/cobol:latest
+image: frankr85/cobol:master
 vscode:
   extensions: 
     - ibm.zopeneditor
