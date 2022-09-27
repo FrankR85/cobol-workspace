@@ -5,6 +5,7 @@
 !*/
 # And all the file types you're interested in.
 !*.CBL
+!*.txt
 !*.sh
 !*.SH
 !*.yml
