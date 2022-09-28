@@ -1,0 +1,30 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.  MAIN.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+             SELECT SUBMARINE-IN ASSIGN TO 'moves.txt'
+             ORGANIZATION IS LINE SEQUENTIAL.
+       DATA DIVISION.
+       FILE SECTION.
+          FD SUBMARINE-IN.
+          01 SUBMARINE-IN-FILE.
+             05 SUBMARINE-FILE PIC X(100).
+       WORKING-STORAGE SECTION.
+       01 CURRENT-COMMAND PIC x(20).
+       01 WS-EOF PIC X(1).
+       PROCEDURE DIVISION.
+           DISPLAY 'HELLO SUBMARINE'
+           OPEN INPUT SUBMARINE-IN
+              PERFORM UNTIL WS-EOF="Y"
+                 READ SUBMARINE-IN INTO CURRENT-COMMAND
+                   AT END MOVE "Y" TO WS-EOF
+                   NOT AT END
+                      PERFORM HANDLE-COMMAND
+                 END-READ
+              END-PERFORM
+           CLOSE SUBMARINE-IN
+           STOP RUN.
+        HANDLE-COMMAND SECTION.
+           DISPLAY CURRENT-COMMAND
+           .
