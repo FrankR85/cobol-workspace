@@ -39,7 +39,9 @@ Die Ausgabe sollte so aussehen:
 Hallo Welt!
 ```
 
-5. Testen, ob das Testframework bei euch läuft (optional): 
+5. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit einer COBOL-Extension wie bitlang.cobol.
+
+**(Optional) Testframework**
 
 ```bash
 ./testframework/run-ut.sh 
@@ -51,8 +53,6 @@ Die letzten Zeilen der Ausgabe sollte in etwa so aussehen:
   0 FAILED
 =================================================
 ```
-
-6. IDE eurer Wahl installieren. Unsere Empfehlung: Visual Studio Code mit einer COBOL-Extension wie bitlang.cobol.
 
 **DIY Install**
 
