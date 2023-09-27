@@ -1,0 +1,29 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.  MAIN.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+             SELECT STRATEGY-IN ASSIGN TO 'input.txt'
+             ORGANIZATION IS LINE SEQUENTIAL.
+       DATA DIVISION.
+       FILE SECTION.
+          FD STRATEGY-IN.
+          01 STRATEGY-IN-FILE.
+             05 STRATEGY-IN-FILE PIC X(4096).
+       WORKING-STORAGE SECTION.
+       01 WS-EOF PIC X(1).
+       01 CURRENT-MOVE PIC X(4096).
+       PROCEDURE DIVISION.
+           OPEN INPUT STRATEGY-IN
+              PERFORM UNTIL WS-EOF="Y"
+                 READ STRATEGY-IN INTO CURRENT-MOVE
+                   AT END MOVE "Y" TO WS-EOF
+                   NOT AT END
+                      PERFORM HANDLE-MOVE
+                 END-READ
+              END-PERFORM
+           CLOSE STRATEGY-IN
+           STOP RUN.
+        HANDLE-MOVE SECTION.
+           DISPLAY CURRENT-MOVE
+           .
