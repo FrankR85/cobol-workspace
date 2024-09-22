@@ -1,13 +1,14 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID.  MAIN.
-      *****************************************************************
-      * Hülle für das Programm
-      *****************************************************************       
+       PROGRAM-ID.  BASEM.
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
+       01 W-TEXTFELD                                   PIC X(10).
        PROCEDURE DIVISION.
-           DISPLAY 'HELLO WORLD'
            STOP RUN.
+
+       S-MAIN SECTION.
+           MOVE 'HALLO WELT' TO W-TEXTFELD
+           EXIT.
