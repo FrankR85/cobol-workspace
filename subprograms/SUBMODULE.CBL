@@ -5,13 +5,12 @@
        01 ZAHL PIC X(100).
        PROCEDURE DIVISION USING ZAHL.
       *    Dieses Modul muss mit cobc -m kompiliert werden
-           DISPLAY "Übergebene Zahl: " ZAHL
-
-           DISPLAY "TEST"
+           DISPLAY "Übergebene Zahl: '" ZAHL"'"
 
            MOVE SPACES TO ZAHL
 
-           GOBACK
-          .
+           DISPLAY "Überschriebene Zahl: '" ZAHL "'"
+
+           GOBACK.
 
        END PROGRAM SUBMODULE.

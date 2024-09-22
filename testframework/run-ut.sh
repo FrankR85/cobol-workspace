@@ -1,1 +1,1 @@
-/home/cobol/cobol-unit-test/run-ut -p testframework TESTFRAMEWORK_C TESTFRAMEWORK_M TESTFRAMEWORK_T
+/home/cobol/cobol-unit-test/run-ut -p kopierbasis TESTCOPY MAIN TEST

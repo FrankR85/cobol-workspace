@@ -11,16 +11,26 @@
            DISPLAY "Willkommen im Hauptprogramm!"
 
            MOVE 3 TO ZAHL
-           MOVE ZEROS TO ZAHL2
-           DISPLAY "Inhalt von Zahl2 vor UP: " ZAHL2
+                     ZAHL2
+           DISPLAY "Inhalt von Zahl vor UP: '" ZAHL "'"
+           
            CALL "SUBMODULE" USING ZAHL
+           
+           DISPLAY "Inhalt von Zahl nach UP: '" ZAHL "'"
+           
+           
+      *    Wie schaut es mit Zahl 2 aus?     
+           DISPLAY "Inhalt von Zahl2 nach UP: '" ZAHL2"'"
+
+      *    Warum ist der Wert von Zahl2 nun anders,
+      *    obwohl die Variable nicht übergeben wurde? 
+      *    ->          
            MOVE ADDRESS OF ZAHL TO TMP
-           DISPLAY "Zahl:  " TMP
+           DISPLAY "Adresse von Zahl:  " TMP
 
            MOVE ADDRESS OF ZAHL2 TO TMP2
-           DISPLAY "Zahl2: " TMP2
+           DISPLAY "Adresse von Zahl2: " TMP2
 
-           DISPLAY "Zahl2: " ZAHL2
            GOBACK
           .
        END PROGRAM MAIN.
