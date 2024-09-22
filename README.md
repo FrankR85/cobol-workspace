@@ -87,7 +87,5 @@ sein.
 
 ## Eigenes Projekt mit dem Testframework
 Damit ihr euch auf das Entwickeln und nicht das Einrichten des Entwicklungs- und Testtools konzentrieren könnt, haben wir euch eine Kopierbasis bereitgestellt, an der ihr nur wenige Anpassungen durchführen müsst:
-1. Kopiert den Ordner kopierbasis
-2. Ersetzt alle Vorkommnisse von kopierbasis durch euren Projektnamen, bspw. mypgm:
-    1. ./kopierbasis in ./mypgm.
-    2. Ändert in der Datei /kopierbasis/run-ut.sh kopierbasis in mypgm.
+1. Kopiert den Ordner testframework und bennent ihn um.
+2. Ändert in der Datei run-ut.sh in eurem kopierten Ordner kopierbasis in den namen eures neuen Ordners.

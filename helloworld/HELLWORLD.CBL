@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. halloWelt.
        PROCEDURE DIVISION.
-        DISPLAY "Hallo Welt!".
+        DISPLAY "Hallo Wwu!".
        STOP RUN.
